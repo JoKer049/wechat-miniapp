@@ -1,0 +1,4 @@
+/* pages/picker/picker.wxss */
+.picker {
+  background-color: #ffeeee;
+}

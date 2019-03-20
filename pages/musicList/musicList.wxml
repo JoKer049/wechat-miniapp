@@ -1,0 +1,49 @@
+<!--pages/musicList/musicList.wxml-->
+<!--pages/swiper/swiper.wxml-->
+<view class="swiper">
+  <swiper
+    autoplay="{{swiper.autoplay}}"
+    interval="{{swiper.interval}}"
+    duration="{{swiper.duration}}"
+    indicator-dots="{{swiper.indicatorDots}}"
+    circular=true
+    style="height:200px"
+  >
+    <block wx:for="{{swiper.imgUrls}}">
+      <swiper-item>
+        <image 
+          mode="widthFix"
+          src="{{item}}" 
+          class="slide-image" 
+          style="width:100%" 
+          height="300" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="srollPage">
+  <scroll-view
+    class='scroll-view'
+    scroll-y
+    style="height: 400px;"
+    scroll-with-animation=true
+  >
+    <view class="musicListTitle">
+      <text>歌单列表</text>
+    </view>
+    <view 
+      class="musicListContent"
+      wx:for="{{scrollPage}}"
+      >
+        <image 
+          class="advartar" 
+          mode="widthFix"
+          src="{{item.advartar}}"
+          data-music-info="{{item}}"
+          bindtap="playMusicNow" 
+        />
+         <text class='author'>{{item.author}}</text>
+         <text class='musicName'>{{item.musicName}}</text>
+    </view>
+  </scroll-view>
+</view>

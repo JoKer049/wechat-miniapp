@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/musicList/musicList",
+    "pages/musicPlay/musicPlay",
+    "pages/scrollPage/scrollPage",
+    "pages/audio/audio",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/swiper/swiper",
+    "pages/picker/picker"
+  ],
+  "window": {
+    "backgroundColor": "#000",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "MusicListPage",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 50,
+    "enablePullDownRefresh": true
+  }
+}

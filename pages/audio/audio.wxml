@@ -1,0 +1,23 @@
+<!--pages/audio/audio.wxml-->
+<view class="audioBox">
+  <view class="backgroundView">
+    <view><image class="poster" src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=e9c41cdaaac379317d68812fd3ffd078/b90e7bec54e736d1be1a52d49e504fc2d46269e5.jpg">
+    </image></view>
+    <view class="title"><text>{{title}}</text></view>
+  </view>
+  <view class="durationSilder">
+    <slider bindchange="sliderChange" block-size="12px" step="1" value="{{currentSeconds}}" max="{{durationSeconds}}" selected-color="FF8C00"/>
+  </view>
+  <view class="musicTime">
+    <text class="times">{{startTime}}/</text> 
+    <text class="times">{{duration}}</text>
+  </view>
+  <view class="button">
+    <button plain class="changePlayState" bindtap="goPrevious">快退</button>
+    <button plain class="changePlayState" bindtap="changePlayState">{{willPlayState}}</button>
+    <button plain class="changePlayState" bindtap="goAfter">快进</button>
+  </view>
+  <view>
+    <icon class="iconfont icon-start" bindtap="changePlayState"></icon>
+  </view>
+</view>

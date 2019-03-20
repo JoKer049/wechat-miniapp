@@ -1,0 +1,29 @@
+<!--pages/swiper/swiper.wxml-->
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  circular=true
+  bindchange="bindchange"
+  current="{{current}}"
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image 
+        src="{{item}}" 
+        class="slide-image" 
+        style="width:100%" 
+        height="200" />
+    </swiper-item>
+  </block>
+</swiper>
+<view>
+  <button bindtap="goPrevious">Go Previous</button>
+  <button bindtap="goAfter">Go After</button>
+</view>
+
+<button bindtap="changeIndicatorDots" style="margin-top: 20px">indicator-dots</button>
+<button bindtap="changeAutoplay">autoplay</button>
+<view>intervalChange<slider bindchange="intervalChange" show-value min="500" max="2000" /></view>
+<view>durationChange<slider bindchange="durationChange" show-value min="1000" max="10000" /></view>

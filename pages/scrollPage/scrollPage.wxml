@@ -1,0 +1,45 @@
+<view class="section">
+  <view class="section__title">Vertical scroll</view>
+  <scroll-view
+    scroll-y
+    class="scroll-view" 
+    style="height: 200px;"
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}"
+    scroll-with-animation=true
+  >
+    <view id="red" class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to scroll into view</button>
+    <button size="mini" bindtap="tapMove">click me to scroll</button>
+  </view>
+</view>
+<view class="section section_gap">
+  <view class="section__title">Horizontal scroll</view>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap2">click me to scroll into view</button>
+    <button size="mini" bindtap="tapMove2">click me to scroll</button>
+  </view>
+  <scroll-view 
+    scroll-x 
+    class="scroll-view_H" 
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toViewHorizontal}}"
+    scroll-left="{{scrollLeft}}"
+    scroll-with-animation=true
+  >
+    <view id="red" class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>
